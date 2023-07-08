@@ -37,14 +37,14 @@ class TodoList extends Component {
   }
   render() {
     return (
-      <div className="todoListMain">
-        <div className="header">
-          <form onSubmit={this.addItem}>
+      <div className="p-20 bg-black">
+        <div className=" className='flex md:flex-row flex-col  items-center justify-between  bg-red-600 p-20 h-fit  m-2 rounded-2xl shadow-red-500 shadow-xl  border-black outline'" >
+          <form onSubmit={this.addItem } className="flex justify-around">
             <input
               ref={(a) => (this._inputElement = a)}
-              placeholder="enter task"
+              placeholder="What's on your mind?" className="rounded-xl w-full mr-5 p-2"
             ></input>
-            <button type="submit">add</button>
+            <button type="submit" className="bg-black rounded-lg text-white p-3">ADD</button>
           </form>
           <TodoItems entries={this.state.items} delete={this.deleteItem} />
         </div>
