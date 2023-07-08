@@ -1,6 +1,6 @@
 import React from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { MdOutlineRestaurantMenu } from 'react-icons/md';
+import { GiTireIronCross } from 'react-icons/gi';
 import stb from '../constants/stb.png';
 import './Navbar.css';
 
@@ -13,9 +13,10 @@ const Navbar = () => {
       </div>
       <ul className="app__navbar-links">
         <li className="p__opensans"><a href="#home">Home</a></li>
-        <li className="p__opensans"><a href="#about">Notes</a></li>
-        <li className="p__opensans"><a href="#menu">Calendar</a></li>
-        <li className="p__opensans"><a href="#awards">FAQs</a></li>
+        <li className="p__opensans"><a href="#home">Rewards</a></li>
+        <li className="p__opensans"><a href="#notes">Notes</a></li>
+        <li className="p__opensans"><a href="#calendar">Calendar</a></li>
+        <li className="p__opensans"><a href="#faq">FAQs</a></li>
         <li className="p__opensans"><a href="#contact">About Us</a></li>
       </ul>
       <div className="app__navbar-login">
@@ -27,7 +28,7 @@ const Navbar = () => {
         <GiHamburgerMenu color="#fff" fontSize={27} onClick={() => setToggleMenu(true)} />
         {toggleMenu && (
           <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
-            <MdOutlineRestaurantMenu fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
+            <GiTireIronCross fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
             <ul className="app__navbar-smallscreen_links">
               <li><a href="#home" onClick={() => setToggleMenu(false)}>Home</a></li>
               <li><a href="#about" onClick={() => setToggleMenu(false)}>Notes</a></li>
@@ -38,6 +39,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
+
     </nav>
   );
 };
